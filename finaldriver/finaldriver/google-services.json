@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "1077684776866",
+    "firebase_url": "https://helloauto-7e164-default-rtdb.firebaseio.com",
+    "project_id": "helloauto-7e164",
+    "storage_bucket": "helloauto-7e164.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077684776866:android:21ff4a49367eb13eec8cfb",
+        "android_client_info": {
+          "package_name": "com.helloauto.driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaaPD_5F7CNEaVM1XmBa5SINR2LySC4Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077684776866-196sg5aia8f283ffrnrbe0ge7o368cum.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.helloautoapp.userapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077684776866:android:f6e7f99e04f06aa2ec8cfb",
+        "android_client_info": {
+          "package_name": "com.helloauto.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaaPD_5F7CNEaVM1XmBa5SINR2LySC4Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077684776866-196sg5aia8f283ffrnrbe0ge7o368cum.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.helloautoapp.userapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077684776866:android:d4daea123ea3e606ec8cfb",
+        "android_client_info": {
+          "package_name": "com.helloautoapp.driverapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaaPD_5F7CNEaVM1XmBa5SINR2LySC4Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077684776866-196sg5aia8f283ffrnrbe0ge7o368cum.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.helloautoapp.userapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077684776866:android:d676ff43ced4eec2ec8cfb",
+        "android_client_info": {
+          "package_name": "com.helloautoapp.userapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaaPD_5F7CNEaVM1XmBa5SINR2LySC4Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077684776866-vf7lg8gkojs838smalt482jvbcsbnc62.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077684776866-196sg5aia8f283ffrnrbe0ge7o368cum.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.helloautoapp.userapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
