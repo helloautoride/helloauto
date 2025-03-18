@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'dart:math';
 import 'dart:ui' as ui;
-import 'package:dash_bubble/dash_bubble.dart';
+// import 'package:dash_bubble/dash_bubble.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -146,7 +146,7 @@ class _MapsState extends State<Maps>
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-    DashBubble.instance.stopBubble();
+    // DashBubble.instance.stopBubble();
     myMarkers = [];
     show = true;
     navigated = false;
@@ -210,7 +210,7 @@ class _MapsState extends State<Maps>
       isBackground = false;
     } else if (state == AppLifecycleState.paused ||
         state == AppLifecycleState.inactive) {
-      DashBubble.instance.stopBubble();
+      // DashBubble.instance.stopBubble();
       isBackground = true;
     }
   }
@@ -2313,12 +2313,12 @@ class _MapsState extends State<Maps>
                                                                             false) {
                                                                           if (pref.getBool('isOverlaypermission') != false &&
                                                                               Theme.of(context).platform == TargetPlatform.android) {
-                                                                            if (await DashBubble.instance.hasOverlayPermission() ==
-                                                                                false) {
-                                                                              setState(() {
-                                                                                isOverLayPermission = true;
-                                                                              });
-                                                                            }
+                                                                            // if (await DashBubble.instance.hasOverlayPermission() ==
+                                                                            //     false) {
+                                                                            //   setState(() {
+                                                                            //     isOverLayPermission = true;
+                                                                            //   });
+                                                                            // }
                                                                           }
                                                                         }
                                                                         if (locationAllowed ==
@@ -8006,8 +8006,8 @@ class _MapsState extends State<Maps>
                                                             isOverLayPermission =
                                                                 false;
                                                           });
-                                                          DashBubble.instance
-                                                              .requestOverlayPermission();
+                                                          // DashBubble.instance
+                                                          //     .requestOverlayPermission();
                                                         },
                                                         child: MyText(
                                                           text: languages[
