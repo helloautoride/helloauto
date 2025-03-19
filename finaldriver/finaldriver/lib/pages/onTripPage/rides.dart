@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:dash_bubble/dash_bubble.dart';
+// import 'package:dash_bubble/dash_bubble.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -58,7 +58,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-    DashBubble.instance.stopBubble();
+    // DashBubble.instance.stopBubble();
 
     if (userDetails['vehicle_types'] != [] && userDetails['role'] != 'owner') {
       setState(() {
@@ -77,7 +77,7 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
       isBackground = false;
     } else if (state == AppLifecycleState.paused ||
         state == AppLifecycleState.inactive) {
-      DashBubble.instance.stopBubble();
+      // DashBubble.instance.stopBubble();
       isBackground = true;
     }
   }
@@ -375,15 +375,15 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
                                                                     .platform ==
                                                                 TargetPlatform
                                                                     .android) {
-                                                          if (await DashBubble
-                                                                  .instance
-                                                                  .hasOverlayPermission() ==
-                                                              false) {
-                                                            setState(() {
-                                                              isOverLayPermission =
-                                                                  true;
-                                                            });
-                                                          }
+                                                          // if (await DashBubble
+                                                          //         .instance
+                                                          //         .hasOverlayPermission() ==
+                                                          //     false) {
+                                                          //   setState(() {
+                                                          //     isOverLayPermission =
+                                                          //         true;
+                                                          //   });
+                                                          // }
                                                         }
                                                       }
                                                       if (locationAllowed ==
@@ -3047,8 +3047,8 @@ class _RidePageState extends State<RidePage> with WidgetsBindingObserver {
                                                           isOverLayPermission =
                                                               false;
                                                         });
-                                                        DashBubble.instance
-                                                            .requestOverlayPermission();
+                                                        // DashBubble.instance
+                                                        //     .requestOverlayPermission();
                                                       },
                                                       child: MyText(
                                                         text: languages[

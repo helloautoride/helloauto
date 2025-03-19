@@ -1,14 +1,14 @@
-import 'package:device_apps/device_apps.dart';
+// import 'package:device_apps/device_apps.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:workmanager/workmanager.dart';
+// import 'package:workmanager/workmanager.dart';
 import 'functions/functions.dart';
 import 'functions/notifications.dart';
 import 'pages/loadingPage/loadingpage.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:bubble_head/bubble.dart';
+// import 'package:bubble_head/bubble.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'dart:io';
 
@@ -16,31 +16,31 @@ import 'dart:io';
 Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   if (message.data['push_type'].toString() == 'meta-request') {
     // print('iuhthtgtr');
-    DeviceApps.openApp('com.helloautoapp.driverapp');
+    // DeviceApps.openApp('com.helloautoapp.driverapp');
   }
 }
 
 @pragma('vm:entry-point')
 void callbackDispatcher() {
-  Workmanager().executeTask((task, inputData) async {
-    try {
-      await Firebase.initializeApp();
-      var val = await Geolocator.getCurrentPosition();
-      // ignore: prefer_typing_uninitialized_variables
-      var id;
-      if (inputData != null) {
-        id = inputData['id'];
-      }
-      FirebaseDatabase.instance.ref().child('drivers/driver_$id').update({
-        'lat-lng': val.latitude.toString(),
-        'l': {'0': val.latitude, '1': val.longitude},
-        'updated_at': ServerValue.timestamp
-      });
-      // ignore: empty_catches
-    } catch (e) {}
-
-    return Future.value(true);
-  });
+  // Workmanager().executeTask((task, inputData) async {
+  //   try {
+  //     await Firebase.initializeApp();
+  //     var val = await Geolocator.getCurrentPosition();
+  //     // ignore: prefer_typing_uninitialized_variables
+  //     var id;
+  //     if (inputData != null) {
+  //       id = inputData['id'];
+  //     }
+  //     FirebaseDatabase.instance.ref().child('drivers/driver_$id').update({
+  //       'lat-lng': val.latitude.toString(),
+  //       'l': {'0': val.latitude, '1': val.longitude},
+  //       'updated_at': ServerValue.timestamp
+  //     });
+  //     // ignore: empty_catches
+  //   } catch (e) {}
+  //
+  //   return Future.value(true);
+  // });
 }
 
 void main() async {
@@ -54,7 +54,7 @@ void main() async {
 
   currentPositionUpdate();
 
-  Workmanager().initialize(callbackDispatcher, isInDebugMode: false);
+  // Workmanager().initialize(callbackDispatcher, isInDebugMode: false);
   FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   runApp(const MyApp());
 }
@@ -73,15 +73,15 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   @override
   void initState() {
     WidgetsBinding.instance.addObserver(this);
-    Workmanager().cancelAll();
+    // Workmanager().cancelAll();
     super.initState();
   }
 
-  final Bubble _bubble =
-      Bubble(showCloseButton: false, allowDragToClose: false);
+  // final Bubble _bubble =
+  //     Bubble(showCloseButton: false, allowDragToClose: false);
   Future<void> startBubbleHead() async {
     try {
-      await _bubble.startBubbleHead(sendAppToBackground: false);
+      // await _bubble.startBubbleHead(sendAppToBackground: false);
     } on PlatformException {
       debugPrint('Failed to call startBubbleHead');
     }
@@ -89,7 +89,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
   Future<void> stopBubbleHead() async {
     try {
-      await _bubble.stopBubbleHead();
+      // await _bubble.stopBubbleHead();
     } on PlatformException {
       debugPrint('Failed to call stopBubbleHead');
     }
@@ -108,7 +108,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
     }
     if (Platform.isAndroid && state == AppLifecycleState.resumed) {
       stopBubbleHead();
-      Workmanager().cancelAll();
+      // Workmanager().cancelAll();
     }
   }
 
@@ -144,15 +144,15 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
 
 void updateLocation(duration) {
   for (var i = 0; i < 15; i++) {
-    Workmanager().registerPeriodicTask('locs_$i', 'update_locs_$i',
-        initialDelay: Duration(minutes: i),
-        frequency: const Duration(minutes: 15),
-        constraints: Constraints(
-            networkType: NetworkType.connected,
-            requiresBatteryNotLow: false,
-            requiresCharging: false,
-            requiresDeviceIdle: false,
-            requiresStorageNotLow: false),
-        inputData: {'id': userDetails['id'].toString()});
+    // Workmanager().registerPeriodicTask('locs_$i', 'update_locs_$i',
+    //     initialDelay: Duration(minutes: i),
+    //     frequency: const Duration(minutes: 15),
+    //     constraints: Constraints(
+    //         networkType: NetworkType.connected,
+    //         requiresBatteryNotLow: false,
+    //         requiresCharging: false,
+    //         requiresDeviceIdle: false,
+    //         requiresStorageNotLow: false),
+    //     inputData: {'id': userDetails['id'].toString()});
   }
 }

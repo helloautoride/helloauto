@@ -1,4 +1,4 @@
-import 'package:contacts_service/contacts_service.dart';
+// import 'package:contacts_service/contacts_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_user/pages/login/login.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,17 +52,17 @@ class _PickContactState extends State<PickContact> {
           });
         }
 
-        Iterable<Contact> contactsList = await ContactsService.getContacts();
+        // Iterable<Contact> contactsList = await ContactsService.getContacts();
 
         // ignore: avoid_function_literals_in_foreach_calls
-        contactsList.forEach((contact) {
-          contact.phones!.toSet().forEach((phone) {
-            contacts.add({
-              'name': contact.displayName ?? contact.givenName,
-              'phone': phone.value
-            });
-          });
-        });
+        // contactsList.forEach((contact) {
+        //   contact.phones!.toSet().forEach((phone) {
+        //     contacts.add({
+        //       'name': contact.displayName ?? contact.givenName,
+        //       'phone': phone.value
+        //     });
+        //   });
+        // });
         if (mounted) {
           setState(() {
             _isLoading = false;
