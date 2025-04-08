@@ -1,0 +1,6 @@
+/finalapp/finalapp/build
+/finalDriver/finalDriver/build
+# Ignore APK builds
+*.apk
+/android/app/build/
+/finaldriver/finaldriver/android/app/build/
